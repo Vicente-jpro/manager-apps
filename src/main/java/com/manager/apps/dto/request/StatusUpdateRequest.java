@@ -13,6 +13,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class StatusUpdateRequest {
     @NotBlank
-    @Pattern(regexp = "active|blocked")
+    @Pattern(regexp = "active|blocked", message = "Status must be either active or blocked")
     private String status;
 }
